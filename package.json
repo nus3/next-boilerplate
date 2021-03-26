@@ -11,6 +11,8 @@
     "lint": "eslint src --ext ts --ext tsx",
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test",
+    "storyshots": "NODE_ENV=test jest --config ./jest.storyshots.config.js",
+    "update-storyshots": "NODE_ENV=test jest --config ./jest.storyshots.config.js --updateSnapshot",
     "storybook": "start-storybook -p 9009 -s ./public",
     "build-storybook": "build-storybook -s ./public"
   },

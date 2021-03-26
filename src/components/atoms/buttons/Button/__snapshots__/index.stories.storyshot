@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/buttons/Button Default 1`] = `
+<button
+  className="font-bold border-0 rounded-lg cursor-pointer inline-block leading-none bg-blue-500 text-white p-4"
+>
+  ボタンのラベル
+</button>
+`;
