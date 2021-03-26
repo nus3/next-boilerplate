@@ -34,6 +34,7 @@
     "@storybook/addon-essentials": "6.2.0-alpha.23",
     "@storybook/addon-links": "6.2.0-alpha.23",
     "@storybook/addon-postcss": "2.0.0",
+    "@storybook/addon-storyshots": "6.1.21",
     "@storybook/react": "6.2.0-alpha.23",
     "@testing-library/react": "11.2.5",
     "@types/jest": "26.0.21",
