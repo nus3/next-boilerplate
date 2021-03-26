@@ -15,7 +15,8 @@
     "update-storyshots": "NODE_ENV=test jest --config ./jest.storyshots.config.js --updateSnapshot",
     "storybook": "start-storybook -p 9009 -s ./public",
     "build-storybook": "build-storybook -s ./public",
-    "screenshot": "storycap http://localhost:9009 --serverCmd 'start-storybook -p 9009 -s ./public'"
+    "screenshot": "storycap http://localhost:9009 --serverCmd 'start-storybook -p 9009 -s ./public'",
+    "visual-test": "reg-suit run --quiet"
   },
   "engines": {
     "npm": "npmではなくyarnを使ってください。yarn.lockを大事にしてください",
@@ -59,6 +60,11 @@
     "lint-staged": "10.5.4",
     "postcss": "8.2.8",
     "postcss-nested": "5.0.5",
+    "reg-keygen-git-hash-plugin": "^0.10.15",
+    "reg-notify-github-plugin": "^0.10.15",
+    "reg-notify-slack-plugin": "^0.10.15",
+    "reg-publish-s3-plugin": "^0.10.15",
+    "reg-suit": "0.10.15",
     "storycap": "3.0.3",
     "tailwindcss": "2.0.4",
     "typescript": "4.2.3"

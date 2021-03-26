@@ -36,3 +36,5 @@ yarn-error.log*
 # storybook
 storybook-static/*
 !storybook-static/.gitkeep
+__screenshots__
+.reg
