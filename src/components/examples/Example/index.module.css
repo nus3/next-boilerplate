@@ -1,0 +1,8 @@
+.text {
+  color: orange;
+  font-weight: bold;
+}
+
+.apply {
+  @apply text-blue-400 font-bold;
+}
