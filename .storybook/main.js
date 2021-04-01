@@ -37,31 +37,36 @@ module.exports = {
     const cssLoader = cssRule.use.find(
       (u) => String(u.loader).indexOf('css-loader') !== -1,
     )
-    cssLoader.options = {
-      // NOTE: css-loaderを呼ぶ前に適用されるローダーの数 1だとpostcss-loaderを適用することになる
-      importLoaders: 1,
+    if (cssLoader) {
+      cssLoader.options = {
+        // NOTE: css-loaderを呼ぶ前に適用されるローダーの数 1だとpostcss-loaderを適用することになる
+        importLoaders: 1,
+      }
     }
 
     // NOTE: postcss-loaderはaddon-postcssのものをそのまま使う
     const postcssLoader = cssRule.use.find(
       (u) => String(u.loader).indexOf('postcss-loader') !== -1,
     )
-    baseConfig.module.rules.push({
-      // NOTE: .module.cssファイルのみが対象
-      test: /\.module\.css$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1,
-            // NOTE: css modulesを有効にする
-            modules: true,
+
+    if (postcssLoader) {
+      baseConfig.module.rules.push({
+        // NOTE: .module.cssファイルのみが対象
+        test: /\.module\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              // NOTE: css modulesを有効にする
+              modules: true,
+            },
           },
-        },
-        postcssLoader,
-      ],
-    })
+          postcssLoader,
+        ],
+      })
+    }
 
     return { ...baseConfig }
   },
