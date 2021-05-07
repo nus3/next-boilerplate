@@ -23,8 +23,8 @@
     "yarn": "1.22.10"
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint",
+    "*.{ts,tsx}": [
+      "eslint --max-warnings 0",
       "yarn format"
     ]
   },
